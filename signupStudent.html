@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brightly || Student Signup</title>
+    <!-- Gooogle Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <!-- css -->
+    <!-- <link rel="stylesheet" href="./page2.css"> -->
+    <link rel="stylesheet" href="css/student.css">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> 
+    <script src="js/utils.js"></script>
+</head>
+<body>
+    <div class="alert-container"></div>
+    <!-- heading -->
+    <div class="wrapper">
+        <div class="form-container" >
+            <h1>  Create Your Student Account</h1>
+            <p>Already have an account?<a href="login.html"> Login here</a></p>
+
+            <form id="form">
+                <div class="form-group">
+                    <input type="text" placeholder="First Name*" id="firstName">
+                </div>
+
+                <div class="form-group">
+                    <input type="text" placeholder="Last Name*" id="lastName">
+                </div>
+
+                 <div class="form-group">
+                        <input type="text" placeholder="Grade*" id="grade">
+                 </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Email*" id="email">
+                </div>
+                <div class="form-group">
+                    <input type="password" placeholder="Password*" id="password">
+                </div>
+                <div class="col" id="Terms">
+                    <p><small > By signing up you agree to Brightily's terms of service and privacy  policy </small> </p>
+                </div>
+                
+                <div class="form-group login">
+                    <button type="submit" class="btn btn-large btn-block" id="login">Sign Up</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+   
+    <script src="js/student.js"></script>
+</body>
+</html>

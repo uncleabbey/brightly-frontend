@@ -1,0 +1,62 @@
+.wrapper{
+    margin: 3em auto;
+    border: 1px solid #C4C4C4;
+    padding: 2em 2em;
+}
+
+.form-container > h1, .form-container  p {
+    color: #1E496C;
+    text-align: center;
+}
+.form-container > h1 {
+    font-size: 2em;
+}
+
+.form-group{
+    margin: 0 auto;
+    width: 98%;
+    text-align: center;
+} 
+ form{
+     margin-top: 2em;
+ }
+ #Terms{
+     padding-left: 3em;
+ }
+
+
+#login{
+    padding: 1em;
+    background: linear-gradient(to right, #FF7534, #F4AE34);
+    color: white;
+    font-weight: bold;
+    width: 85%;
+    margin: 2.5em auto 0 auto ;
+}
+
+#form  input {
+    padding: 1.2em 1em;
+    border: 1px solid #C4C4C4;
+    width: 85%;
+}
+@media screen and (max-width: 650px) {
+    .wrapper{
+        margin: 4em auto;
+        width: 95%;
+        padding: 2em 1em;
+     }
+     .form-container > h1 {
+        font-size: 1.8em;
+        padding-left: 1.8em; 
+     }
+}
+@media screen and (min-width: 651px)  and (max-width: 950px) {
+    .wrapper{
+        width: 75%;
+     }
+}
+@media screen and (min-width: 951px)  and (max-width: 1500px) {
+    .wrapper{
+        width: 30%;
+     }
+}
