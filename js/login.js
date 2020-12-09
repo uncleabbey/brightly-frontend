@@ -24,5 +24,6 @@ document.getElementById('form').addEventListener('submit', async (event) => {
     } else {
       localStorage.setItem('token', res.data.token);
       displayAlert('success', res.message);
+      location.href = "/dashboard.html"
     }
   });
