@@ -55,7 +55,6 @@ const loadData = async () => {
     }
 }
 
-loadData()
 
 
 const toggleBtn = document.querySelector(".toggler");

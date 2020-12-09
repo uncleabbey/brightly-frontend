@@ -8,3 +8,5 @@ dateElement.innerHTML= today.toLocaleDateString("en-US", options);
 anotherDateElement.innerHTML= today.toLocaleDateString("en-US", options);
 
 
+// initialize load data
+loadData()
