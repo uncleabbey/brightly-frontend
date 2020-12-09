@@ -1,0 +1,182 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;  
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+#navIcon{
+    float: right;
+    flex-direction: row;
+    
+}
+
+.firstName{
+    padding-left: 5px;
+    color: #242424;
+    font-family: Helvetica;
+    font-weight: bold;
+    font-style: normal;
+}
+
+.image{
+    margin-bottom: 50px;
+}
+
+#nav{
+    
+    color: #FF8200;
+    
+    /* padding-right: 0; */
+    
+}
+
+
+.iconify{
+    
+    margin-right: 10px;
+}
+
+#navs{
+    color: #FF8200;
+    padding-top: 20px;
+    font-family: Helvetica;
+    font-weight: bold;
+    
+    
+}
+
+
+.head{
+    margin-top: 7%;
+    font-family: Helvetica;
+    font-weight: bold;
+    color: #1E496C;
+    margin-left: 50px;
+}
+
+.quiz{
+    background: #FFFFFF;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
+    display: flex;
+    padding-top: 2%;
+    width: 400px;
+    margin-left: 50px;
+}
+.quizText{
+    float: right;
+    margin-top: 10px;
+    
+}
+
+.quizText2{
+    margin-top: 20%;
+    padding-top: 7%;
+    color: #8D8D8D;
+    font-family: Helvetica;
+}
+
+.date{
+    font-family: Helvetica;
+    padding-top: 2px;
+    color: #8D8D8D;
+    font-size: 12px;
+}
+
+h5{
+    color: #474747;
+    font-family: Helvetica;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.textBook{
+    color: #FF8200;
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 20px;
+    font-style: normal;
+    margin-left: 50px;
+}
+
+.textbookImage{
+    margin-left: 50px;
+}
+
+.homework{
+    background-color: #B2DB35;
+    border-radius: 25px;
+    width: 400px;
+    height: 450px;
+    margin-left: 10%;
+    margin-top: 2%;
+    position: absolute;
+}
+
+.homeworkText{
+    color: #146831;
+    font-family: Helvetica;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 30px;
+}
+
+.homeworkDue{
+    position: relative;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
+    width: 400px;
+    height: 380px;
+    margin-top: 17%;
+    margin-left: 55px;
+}
+
+.dueText{
+    color: #242424;
+    font-family: Helvetica;
+    font-style: normal;
+    font-weight: bold;
+   
+    
+}
+
+.due{
+    display: flex;
+}
+
+.dueText2{
+    float: right;
+    font-family: Helvetica;
+    
+    color: #242424;
+}
+
+.dueText3{
+    color: #242424;
+    font-family:Helvetica;
+    font-weight: bold;
+    font-style: normal;
+}
+
+.materials{
+    background: linear-gradient(180deg, #B2DB35 0%, #146831 100%);
+    border: 1px solid #C4C4C4;
+    box-sizing: border-box;
+    border-radius: 25px;
+    width: 400px;
+    height: 150px;
+    margin-left: 50px;
+}
+
+.materialText{
+    margin-left: 40px;
+    padding-top: 12px;
+    color: #FFFFFF;
+    font-family: Helvetica;
+}

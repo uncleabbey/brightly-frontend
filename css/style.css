@@ -18,6 +18,11 @@ body {
     background: linear-gradient(to right,rgb(255, 102, 0), rgb(255, 196, 0));
     color: white;
     
+    
+}
+
+.sign:focus{
+    outline:none;
 }
 
 .modalHeading{
@@ -41,6 +46,11 @@ body {
     float: right;
     color: #C4C4C4;
     margin-left: 91%;
+    
+}
+
+.close:focus{
+    outline:none;
 }
 
 
