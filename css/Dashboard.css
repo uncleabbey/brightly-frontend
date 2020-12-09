@@ -9,6 +9,23 @@ body{
     padding: 0;
 }
 
+.header, .header > ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header ul {
+    list-style: none;
+}
+.main {
+    display: flex;
+}
+.side-bar-cont {
+    flex: 1;
+}
+.mainbar {
+    flex: 5;
+}
 #navIcon{
     float: right;
     flex-direction: row;
@@ -28,19 +45,25 @@ body{
 }
 
 #nav{
-    
     color: #FF8200;
-    
-    /* padding-right: 0; */
-    
 }
-
-
+.active {
+    font-weight: bolder;
+}
+.nav-link:hover {
+    text-decoration: underline;
+    color: black;
+    font-weight: bolder;
+}
+.toggler {
+    /* width: 5em;
+    height: 5em; */
+    margin-left: 1em;
+    display: none;
+}
 .iconify{
-    
     margin-right: 10px;
 }
-
 #navs{
     color: #FF8200;
     padding-top: 20px;
@@ -173,10 +196,71 @@ h5{
     height: 150px;
     margin-left: 50px;
 }
-
+.material-second {
+    margin-left: 2em;
+}
 .materialText{
     margin-left: 40px;
     padding-top: 12px;
     color: #FFFFFF;
     font-family: Helvetica;
 }
+@media screen and (max-width: 900px) {
+    .sidebar {
+        display: none;
+        width: 400px;
+        position: absolute;
+        top: 8em;
+        z-index: 1; 
+        background: #fff;
+    }
+    .logo > img {
+        width: 80px;
+        height: 80px;
+    }
+    .toggler {
+        display: block;
+        /* border: 2px solid #000; */
+        /* background: #000; */
+
+    }
+    .main {
+        display: block;
+    }
+    .mainbar {
+        margin-left: 0;
+    }
+    .mainbar > .head {
+        margin: 0;
+    }
+    .quiz {
+        margin-left: 0;
+    }
+}
+@media screen and (max-width: 500px) {
+    .logo > img {
+        width: 50px;
+        height: 50px;
+    }
+    .sidebar {
+        display: none;
+        width: 250px;
+        position: absolute;
+        bottom: 2em;
+        z-index: 1; 
+        background: #fff;
+    }
+    .textbookImage{
+    margin: 0 auto;
+}
+.materials, .homework {
+    margin: 1em auto;
+}
+.toggler {
+    width: 30px;
+    height: 30px;
+}
+.homeworkDue{
+    margin-left: 5px;
+}
+} 
