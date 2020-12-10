@@ -1,0 +1,111 @@
+.wrapper{
+    display: flex;
+    position: relative;
+} 
+
+.container-fluid{
+    display: flex;
+    position: relative;
+    height: 1024px;
+    width: 1140px;
+}
+
+.wrapper > .container-fluid > .sidebar{
+    position: relative;
+    width: 243px;
+    height: 1024px;
+}
+
+.wrapper > .container-fluid > .sidebar > ul > li a {
+    padding: 12px;
+    color: #FF8200;
+}
+
+.wrapper > .container-fluid .sidebar ul li a {
+    display: block;
+}
+
+.wrapper > .container-fluid .sidebar ul li a .fas , .far{
+width: 30px;
+}
+
+.wrapper > .container .main-content{
+    width: 1197px;
+    height: 1024px;
+}
+.icon{
+    margin: 45px 72px 67px;
+}
+#menu{
+    margin-top: 100px;
+    width: 202px;
+    height: 233px;
+   
+}
+
+.header{
+    margin-top: 45px;
+    margin-left: 50px;
+    width: 816px;
+    height: 110px;
+    color: #1E496C;
+}
+
+.main-content > .header > .Resources {
+    display: flex;
+    position: relative; 
+}
+
+.main-content > .header > .Resources > .video a , .Notes a{
+    color: #146831;
+}
+.main-content > .header > .Resources > .Notes{
+    margin-left: 20px;
+}
+
+#form .input-group {
+    padding: 5px;
+    border: 1px solid #C4C4C4;
+    border-radius: 25px;
+    width: 314px;
+    display: flex;
+    margin-left: 400px;
+}
+#form .input-group #search {
+     border: 0;
+     outline: 0;
+     margin-left: 10px;
+}
+
+#form .input-group input:focus {
+    border: 0;
+    outline: none;
+}
+
+#search{
+    padding: 0px;
+}
+
+i{
+    margin-top: 4px;
+}
+.container > .main-content > .header > .Resources > .Notes {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.container .main-content > .header > .Resources > .Notes > img {
+   width: 100%;
+}
+
+.noteList{
+    display: flex;
+}
+
+.noteList {
+    display: flex;
+    text-align: center;
+}
+.noteList > div > img {
+   width: 100%;
+}
