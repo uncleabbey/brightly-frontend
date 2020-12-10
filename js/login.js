@@ -27,3 +27,19 @@ document.getElementById('form').addEventListener('submit', async (event) => {
       location.href = "/dashboard.html"
     }
   });
+
+const makeFetch = async (data, url) => {
+    try {
+      const res = await fetch(url, {
+        method: 'POST',
+        headers: {
+          'Content-type': 'application/json',
+        },
+        body: JSON.stringify(data)
+      });
+      const data_1 = await res.json();
+      return data_1;
+    } catch (err) {
+      return err;
+    }
+};
