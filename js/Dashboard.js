@@ -7,6 +7,24 @@ const today = new Date();
 dateElement.innerHTML= today.toLocaleDateString("en-US", options);
 anotherDateElement.innerHTML= today.toLocaleDateString("en-US", options);
 
+const makeFetch = async (url) => {
+    const token = localStorage.getItem("token");
+    // console.log(token)
+    try {
+      const res = await fetch(url, {
+        method: 'GET',
+        headers: {
+          'Content-type': 'application/json',
+          "Authorization": `Bearer ${token}`
+        }
+      });
+      const data_1 = await res.json();
+      return data_1;
+    } catch (err) {
+      return err;
+    }
+};
+
 const loadData = async () => {
     const url = "https://brightly-api.herokuapp.com/api/v1/auth/me";
     
@@ -30,3 +48,20 @@ const loadData = async () => {
 
 // initialize load data
 loadData()
+
+const toggleBtn = document.querySelector(".toggler");
+
+const nav = document.querySelector(".sidebar")
+
+toggleBtn.onclick = () => {
+  if(nav.style.display === 'none') {
+    nav.style.display = 'block';
+} else if(nav.style.display === 'block') {
+  // header.classList.remove('header')
+  nav.style.display = 'none'
+} else {
+  // header.classList.add('header')
+  nav.style.display = 'block'
+}
+
+};
