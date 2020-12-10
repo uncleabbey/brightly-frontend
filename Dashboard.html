@@ -9,11 +9,10 @@
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <link rel="stylesheet" href="css/dashboard.css">
         <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
-        <script defer src="js/utils.js"></script>
+        
 </head>
 <body>
-    
-    <div class="container-fluid">
+    <div class="wrapper">
             <header class="header">
                 <img class="toggler" src="https://res.cloudinary.com/kayode/image/upload/v1607540744/icons8-menu-48_vnxw0t.png" alt="Menu">
                 <a class="logo mt-4" href="#"><img class="image ml-5"src="https://res.cloudinary.com/ddh4kd4ab/image/upload/v1606728913/Layer_x0020_1_dvw2sz.svg" alt=""></a>
@@ -45,16 +44,13 @@
                                 <a class="nav-link"  href="#"><span class="iconify" data-icon="grommet-icons:resources" data-inline="false"></span>Resources</a>
                                 <a class="nav-link"  href="#"><span class="iconify" data-icon="mdi:timetable" data-inline="false"></span>Time table</a>
                                 <a class="nav-link"  href="#"><span class="iconify" data-icon="eva:settings-2-outline" data-inline="false"></span>Settings</a>
-                            
                             </div>
                         </nav>
                     </div>
-                    
                     <div class="mainbar">
                         <h3 class="head">Class Activities</h3>
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-6 col-sm-6" id="first">
+                            <div class="top-box">
+                                <div class="quiz-container" id="first">
                                     <div class="quiz">
                                         <div>
                                             <img src="https://res.cloudinary.com/ddh4kd4ab/image/upload/v1607348187/Group_42_z8orb6.svg" alt="" width="74px" height="74px" class="quizImage pt-2">
@@ -65,7 +61,7 @@
                                         </div>
                                         <h6 class="quizText2">Take today's quiz <span class="iconify ml-3" data-icon="eva:arrow-forward-outline" data-inline="false"></span></h6>
                                     </div>
-                                    <div class="quiz mt-4">
+                                    <div class="quiz">
                                         <div>
                                             <img src="https://res.cloudinary.com/ddh4kd4ab/image/upload/v1607348193/Group_43_bwc5it.svg" alt="" width="74px" height="74px" class="quizImage pt-2">
                                         </div>
@@ -75,68 +71,61 @@
                                         </div>
                                         <h6 class="quizText2">Take today's quiz <span class="iconify ml-3" data-icon="eva:arrow-forward-outline" data-inline="false"></span></h6>
                                     </div>
-                                    <h6 class="textBook mt-3">Class Textbooks</h6>
+                                    <h6 class="textBook">Class Textbooks</h6>
                                     <div class="textbookImage">
-                                        <img src="https://res.cloudinary.com/ddh4kd4ab/image/upload/v1607352510/brightly_text_maths_1_kjjrfp.svg" alt="" width="120px" height="130px">
-                                        <img src="https://res.cloudinary.com/ddh4kd4ab/image/upload/v1607352514/brightly_text_english_1_x6kamz.svg" alt="" width="120px" height="130px">
-                                        <img src="https://res.cloudinary.com/ddh4kd4ab/image/upload/v1607352523/brightly_text_english_2_romaj5.svg" alt="" width="120px" height="130px">
+                                        <img src="https://res.cloudinary.com/ddh4kd4ab/image/upload/v1607352510/brightly_text_maths_1_kjjrfp.svg" alt="" ">
+                                        <img src="https://res.cloudinary.com/ddh4kd4ab/image/upload/v1607352514/brightly_text_english_1_x6kamz.svg" alt="">
+                                        <img src="https://res.cloudinary.com/ddh4kd4ab/image/upload/v1607352523/brightly_text_english_2_romaj5.svg" alt="">
                                     </div>
                                 </div>
-                                <div class="col-md-6 col-sm-6">
+                                <div class="homework-container">
                                     <div class="homework">
-                                        <center>
                                             <h4 class="homeworkText py-3">Homework</h4>
-                                        </center>
-                                    </div>
-                                    <div class="homeworkDue">
-                                        <center><h5 class="dueText py-4">You have 3 homework due</h5></center>
-                                        <div class="due py-2">
-                                            <div>
-                                                <img class="dueImage px-4" src="https://res.cloudinary.com/ddh4kd4ab/image/upload/v1607418367/Group_44_rn3wi2.svg" alt="">
+                                            <div class="homeworkDue">
+                                                <center><h5 class="dueText py-4">You have 3 homework due</h5></center>
+                                                <div class="due py-2">
+                                                    <div>
+                                                        <img class="dueImage px-4" src="https://res.cloudinary.com/ddh4kd4ab/image/upload/v1607418367/Group_44_rn3wi2.svg" alt="">
+                                                    </div>
+                                                    <div class="dueText2">
+                                                        <h6 class="dueText3">English Assignment</h6>
+                                                        <p>Due today</p>
+                                                    </div>
+                                                </div>
+                                                <div class="due py-2">
+                                                    <div>
+                                                        <img class="dueImage px-4" src="https://res.cloudinary.com/ddh4kd4ab/image/upload/v1607418372/Group_45_azsrsw.svg" alt="">
+                                                    </div>
+                                                    <div class="dueText2">
+                                                        <h6 class="dueText3">Science Practice Tutorial</h6>
+                                                        <p>Due today</p>
+                                                    </div>
+                                                </div>
+                                                <div class="due py-2">
+                                                    <div>
+                                                        <img class="dueImage px-4" src="https://res.cloudinary.com/ddh4kd4ab/image/upload/v1607418378/Group_46_ejuocf.svg" alt="">
+                                                    </div>
+                                                    <div class="dueText2">
+                                                        <h6 class="dueText3">Civic Practice Questions</h6>
+                                                        <p>Due today</p>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div class="dueText2">
-                                                <h6 class="dueText3">English Assignment</h6>
-                                                <p>Due today</p>
-                                            </div>
-                                        </div>
-                                        <div class="due py-2">
-                                            <div>
-                                                <img class="dueImage px-4" src="https://res.cloudinary.com/ddh4kd4ab/image/upload/v1607418372/Group_45_azsrsw.svg" alt="">
-                                            </div>
-                                            <div class="dueText2">
-                                                <h6 class="dueText3">Science Practice Tutorial</h6>
-                                                <p>Due today</p>
-                                            </div>
-                                        </div>
-                                        <div class="due py-2">
-                                            <div>
-                                                <img class="dueImage px-4" src="https://res.cloudinary.com/ddh4kd4ab/image/upload/v1607418378/Group_46_ejuocf.svg" alt="">
-                                            </div>
-                                            <div class="dueText2">
-                                                <h6 class="dueText3">Civic Practice Questions</h6>
-                                                <p>Due today</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-6 col-sm-6">
-                                    <div class="materials mt-5">
-                                        <h6 class="materialText" style="font-weight: bold;">2 new materials have been <br> uploaded in resources</h6>
-                                        <p class="materialText" style="margin-bottom: 18px; font-size: 14px; padding-top: 25px;">Click here to view <span class="iconify ml-3" data-icon="eva:arrow-forward-outline" data-inline="false" width="20px"></span> </p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-sm-6">
-                                    <div class="materials mt-5 material-second">
-                                        <h6 class="materialText" style="font-weight: bold;">Your Science class test has been <br>graded!</h6>
-                                        <p class="materialText" style="margin-bottom: 18px; font-size: 14px; padding-top: 25px;">Click here to view your scores <span class="iconify ml-3" data-icon="eva:arrow-forward-outline" data-inline="false" width="20px"></span> </p>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                            <div class="materials-container">
+                                    <div class="materials material-first">
+                                        <h6 class="materialText">2 new materials have been <br> uploaded in resources</h6>
+                                        <p class="materialText">Click here to view <span class="iconify ml-3" data-icon="eva:arrow-forward-outline" data-inline="false" width="20px"></span> </p>
+                                    </div>
+
+                                    <div class="materials material-second">
+                                        <h6 class="materialText">Your Science class test has been <br>graded!</h6>
+                                        <p class="materialText">Click here to view your scores <span class="iconify ml-3" data-icon="eva:arrow-forward-outline" data-inline="false" width="20px"></span> </p>
+                                    </div>
+                            </div>
+
                     </div>
                 </div>
         
@@ -152,5 +141,6 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
     integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
 </script>
+<script defer src="js/utils.js"></script>
 <script src="js\dashboard.js"></script>
 </html>
