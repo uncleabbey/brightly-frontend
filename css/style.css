@@ -54,11 +54,21 @@ body {
 }
 
 
-.nav-link{
-    color:black;
+#navs{
+    color:#000000;
     font-family: Helvetica;
     
+    
 }
+
+#active{
+    color: #1E496C;
+    font-family: Helvetica;
+    font-weight: bold;
+    
+    
+}
+
 
 .nav-link:hover{
     color: black;
@@ -243,6 +253,18 @@ p{
     padding: 5% 0% 5% 5%;
     color: white;
     font-family: Helvetica;
+}
+
+.footerText{
+    color: #FFFFFF;
+    font-family: Helvetica;
+    font-style: normal;
+    font-size: 17px;
+}
+
+.footerText2{
+    margin-top: 25px;
+    font-size: 18px;
 }
 ul li{
     list-style-type: none;
