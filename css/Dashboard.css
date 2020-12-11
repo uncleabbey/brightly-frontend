@@ -51,10 +51,13 @@ body, .wrapper {
 }
 .active {
     font-weight: bolder;
+    border-left: 3px solid #FF8200;
+    
+    
 }
 .nav-link:hover {
     text-decoration: underline;
-    color: black;
+    color: #1E496C;
     font-weight: bolder;
 }
 .toggler {
