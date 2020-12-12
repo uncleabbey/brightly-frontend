@@ -15,6 +15,13 @@
     padding-left: 2em;
  } 
  
+ .close{
+    display: flex;
+    float: right;
+    color: #C4C4C4;
+    margin-left: 70%;
+    padding-bottom: 5%;
+ }
  #login{
      padding-top: 1em;
      padding-bottom: 1em;
