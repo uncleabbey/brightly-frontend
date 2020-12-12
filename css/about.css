@@ -1,8 +1,8 @@
-*,
+/* *,
 *::before,
 *::after {
     box-sizing: border-box;  
-}
+} */
 .container-fluid {
     margin: 0;
     padding: 0;
@@ -10,6 +10,9 @@
 body {
     margin: 0;
     padding: 0;
+}
+.pad {
+    padding: 1em 3em;
 }
 .sign{
     border: none;
