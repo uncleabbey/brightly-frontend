@@ -1,0 +1,63 @@
+
+.mainbar-header {
+  margin-left: 4em;
+}
+.mainbar-header > h1 {
+  color: #1E496C;
+}
+
+.classes {
+  background: #B2DB35;
+  border-radius: 25px;
+  /* padding: 2em; */
+  width: 95%;
+  margin: 2em;
+}
+.classes-head {
+  padding: 1em 2em;
+  
+}
+.classes-head h4 {
+  color: #146831;
+  font-weight: bolder;
+}
+.classes-body {
+  border-radius: 15px 15px 0 0;
+  background: #fff;
+  padding: 1em 2em;
+}
+.classes h5 {
+  color: #146831;
+  font-weight: bold;
+}
+.classes p {
+  /* width: 50%; */
+  font-size: .875em;
+  flex: 1;
+}
+.flex {
+  display: flex;
+}
+.class-link > a {
+  margin-top: auto;
+  border-radius: 30px;
+  padding: 1em 3em;
+  background: linear-gradient(270deg, #F4AE34 7.85%, #FF7534 80.23%);
+  color: white;
+}
+
+@media screen and (max-width: 500px) {
+  .mainbar-header > h1 {
+  font-size: 1.75em;
+}
+  .flex {
+    flex-direction: column;
+    padding-bottom: 1em;
+  }
+  .class-link > a {
+  margin-top: 2em;
+  text-align: center;
+  padding: .8em 1.5em;
+  border-radius: 20px;
+}
+}
