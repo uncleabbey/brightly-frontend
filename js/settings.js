@@ -1,77 +1,56 @@
-const userDetails = {
-    firstName: "Evelyn",
-    lastName: "Okereke",
-    email: "okerekeEvy@gmail.com",
-    password: "babalawonimi"
-  }
+// load data on page
+loadData()
+
+
+const userDetails = (data) => {
   
+  const first = document.querySelector(".firstName");
+  // const { firstName } = data;
   const email = document.getElementById("email");
   const firstName = document.getElementById("firstName");
   const lastName = document.getElementById("lastName");
   const password = document.getElementById("password");
+  const avatar = document.querySelector(".avatar");
+  const image = document.querySelector(".profile-pix");
+  first.innerHTML = data.firstName;
   
-  
-  email.value = userDetails.email;
-  firstName.value = userDetails.firstName;
-  lastName.value = userDetails.lastName;
-  password.value = userDetails.password;
-
-
-  const toggleBtn = document.querySelector(".toggler");
-
-const nav = document.querySelector(".sidebar")
-
-toggleBtn.onclick = () => {
-  if(nav.style.display === 'none') {
-    nav.style.display = 'block';
-} else if(nav.style.display === 'block') {
-  // header.classList.remove('header')
-  nav.style.display = 'none'
-} else {
-  // header.classList.add('header')
-  nav.style.display = 'block'
+  email.value = data.email;
+  firstName.value = data.firstName;
+  lastName.value = data.lastName;
+  password.value = "gdggdgsss";
+  image.src = data.avatar;
+  avatar.src = data.avatar;
 }
 
-};
 
-const makeFetch = async (url) => {
-    const token = localStorage.getItem("token");
-    // console.log(token)
-    try {
-      const res = await fetch(url, {
-        method: 'GET',
+
+document.getElementById("file").addEventListener("change", (e) => handleUpload(e));
+
+const handleUpload = (event) => {
+  const files = event.target.files;
+  const formData = new FormData()
+  formData.append('file', files[0])
+  const url = "https://brightly-api.herokuapp.com/api/v1/auth/change/avatar"
+  // const url = "http://localhost:3000/api/v1/auth/change/avatar"
+  const token = localStorage.getItem("token");
+  fetch(url, {
+        method: 'PATCH',
         headers: {
-          'Content-type': 'application/json',
           "Authorization": `Bearer ${token}`
-        }
-      });
-      const data_1 = await res.json();
-      return data_1;
-    } catch (err) {
-      return err;
-    }
-};
-
-const loadData = async () => {
-    const url = "https://brightly-api.herokuapp.com/api/v1/auth/me";
-    
-    try {
-        const res = await makeFetch(url)
-        console.log(res.data)
-        if(res.status === "success") {
-            displayAlert("success", res.message)
-            const first = document.querySelector(".firstName");
-            const { firstName} = res.data.user;
-            first.innerHTML = firstName;
+        },
+        body: formData
+      }).then(response => response.json())
+  .then(data => {
+    console.log(data)
+      if(data.status === "success") {
+            displayAlert("success", data.message)
+            userDetails(data.data.user);
         } else {
           displayAlert("danger", res.error);
-          location.href = "/login.html"
+          // location.href = "/login.html"
         } 
-        
-    } catch (error) {
-        console.log(error)
-    }
+  })
+  .catch(error => {
+    console.error(error)
+  });
 }
-
-// initialize load data
-loadData()
