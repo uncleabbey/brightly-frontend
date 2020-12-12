@@ -103,8 +103,14 @@ form {
     border-radius: 20px 20px 0 0;
     margin-bottom: 0;
 }
-
-
+.profilePicture > img {
+  width: 234px;
+  height: 234px;
+  border-radius: 50%;
+}
+.change-picture {
+  margin-top: .4em;
+}
 .first {
   color: grey;
   font-weight: normal;
@@ -117,10 +123,16 @@ td {
     padding: 1em;
     border-bottom: 2px solid white; 
   }
-
-.active {
-  font-weight: bolder;
+.modal {
+  margin-top: 15em;
 }
+.modal-body {
+  text-align: center;
+  padding: 4em 2em;
+}
+/* .active {
+  font-weight: bolder;
+} */
 
 @media only screen and (max-width: 900px) {
   .mainbar {
