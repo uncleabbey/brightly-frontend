@@ -23,6 +23,7 @@ dayElement.innerHTML = date.toLocaleDateString()
 
 const fetchClassData = async () => {
   try {
+    // const url = "http://localhost:3000/api/v1/class/grade";
     const url = "https://brightly-api.herokuapp.com/api/v1/class/grade";
     const res = await makeFetch(url)
     if(res.status === "success") {

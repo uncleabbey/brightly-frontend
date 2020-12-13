@@ -8,7 +8,10 @@ body, .wrapper {
     margin: 0;
     padding: 0;
 }
-
+.alert-container {
+    position: fixed;
+    left: 0;
+}
 .header, .header > ul {
     display: flex;
     justify-content: space-between;

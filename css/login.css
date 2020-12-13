@@ -90,7 +90,10 @@
      color: #9E9E9E;
      font-weight: bold;
  }
- 
+ .alert-container {
+    position: fixed;
+    left: 0;
+}
  @media screen and (max-width: 650px) {
      .wrapper{
          margin: 4em auto;
