@@ -241,6 +241,86 @@ h5{
     width: 120px;
     height: 130px;
 }
+.notification-cont {
+    display: none;
+    border: 1px solid #E1DEDE;
+    position: absolute;
+    width: 323px;
+    height: 300px;
+    left: 1034px;
+    top: 120px;
+    background: #E1DEDE;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    overflow-y: scroll;
+}
+.notification-cont > h6 {
+    text-align: center;
+}
+.notification-cont > ul {
+    padding: 0;
+    list-style: none;
+    background: #fff;
+}
+.notification {
+    display: flex;
+    border-bottom: 2px solid #ccc;
+    padding: .8em;
+    font-size: .75em;
+}
+.notification > img {
+    margin-right: .86em;
+}
+.profile-cont {
+    display: none;
+    border: 1px solid #E1DEDE;
+    position: absolute;
+    width: 323px;
+    /* height: 500px; */
+    left: 1034px;
+    top: 100px;
+    background: #E1DEDE;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+.profile-cont > h6 {
+    font-weight: bolder;
+}
+.profile-cont > h6, .profile-cont .profile-body-top {
+    text-align: center;
+}
+.profile-cont > .profile-body-top {
+    font-size: .875em;
+}
+.profile-body-top {
+    padding: 2em 0;
+}
+.profile-body {
+    background: #fff;
+    padding: 1.5em;
+}
+.profile-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.profile-body-bottom {
+    padding: 1em;
+    border-top: 1px solid #ccc;
+}
+.profile-body-bottom > p {
+    margin-top: 1em;
+    text-align: center;
+}
+.profile-body-bottom > p > a {
+    display: flex;
+}
+.profile-body-bottom > p > a > img {
+    margin-right: 1em;
+}
+.profile-name {
+    font-weight: bolder;
+}
 @media screen and (max-width: 900px) {
     .sidebar {
         display: none;
@@ -267,6 +347,17 @@ h5{
     .quiz {
         margin-left: 0;
     }
+    .notification-cont {
+    width: 323px;
+    height: 300px;
+    left: 404px;
+    top: 120px;
+}
+.profile-cont {
+    width: 323px;
+    left: 404px;
+    top: 100px;
+}
 }
 @media screen and (max-width: 500px) {
     .head {
@@ -317,5 +408,16 @@ h5{
 
 .top-box{
     flex-direction: column;
+}
+.notification-cont {
+    width: 200px;
+    height: 200px;
+    left: 100px;
+    top: 90px;
+}
+.profile-cont {
+    width: 200px;
+    left: 100px;
+    top: 100px;
 }
 } 

@@ -20,6 +20,10 @@ const userDetails = (data) => {
   password.value = "gdggdgsss";
   image.src = data.avatar;
   avatar.src = data.avatar;
+  const name = document.querySelector(".profile-name");
+  const profile = document.querySelector(".profile-image");
+  name.innerHTML = `${data.firstName} ${data.lastName}`;
+  profile.src = data.avatar;
 }
 
 
@@ -54,3 +58,4 @@ const handleUpload = (event) => {
     console.error(error)
   });
 }
+
