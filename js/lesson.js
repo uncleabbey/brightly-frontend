@@ -7,6 +7,10 @@ const userDetails = (data) => {
   first.innerHTML = data.firstName;
   avatar.src = data.avatar;
   formImage.src = data.avatar;
+  const name = document.querySelector(".profile-name");
+  const profile = document.querySelector(".profile-image");
+  name.innerHTML = `${data.firstName} ${data.lastName}`;
+  profile.src = data.avatar;
 };
 
 let resp;

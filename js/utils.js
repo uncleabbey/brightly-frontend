@@ -73,3 +73,76 @@ toggleBtn.onclick = () => {
 }
 
 }
+
+const notificationsData = [
+  {
+    message: "Your Science test has been graded",
+    time: "1 hour ago"
+  },
+  {
+    message: "New video on dipthong graded",
+    time: "1 hour ago"
+  },
+  {
+    message: "Your Task test has been graded",
+    time: "1 hour ago"
+  },
+  {
+    message: "Your Task test has been graded",
+    time: "1 hour ago"
+  },
+  {
+    message: "Your Task test has been graded",
+    time: "1 hour ago"
+  },
+]
+
+const displayNotiToUI = (data) => {
+  const li = document.createElement("li");
+  li.className = "notification"
+  const img = document.createElement("img")
+  img.src = "https://res.cloudinary.com/kayode/image/upload/v1607922152/Vector_y26jlw.svg";
+  const div = document.createElement("div")
+  const p = document.createElement("p")
+  const span = document.createElement("span")
+
+  p.innerHTML = data.message;
+  span.innerHTML = data.time;
+  div.append(p)
+  div.append(span)
+  li.append(img)
+  li.append(div)
+  notificationsList.append(li);
+}
+const notificationsList  = document.querySelector(".notification-list");
+const loadNotification = () => notificationsData.map((item) => displayNotiToUI(item))
+
+loadNotification();
+
+
+const noteCont = document.querySelector(".notification-cont")
+
+document.getElementById("notification-btn").addEventListener("click", (e) => {
+  if(noteCont.style.display === 'none') {
+    noteCont.style.display = 'block';
+} else if(noteCont.style.display === 'block') {
+  // header.classList.remove('header')
+  noteCont.style.display = 'none'
+} else {
+  // header.classList.add('header')
+  noteCont.style.display = 'block'
+}
+})
+
+const profileCont = document.querySelector(".profile-cont");
+document.getElementById("profile-btn").addEventListener("click", (e) => {
+  if(profileCont.style.display === 'none') {
+    profileCont.style.display = 'block';
+} else if(profileCont.style.display === 'block') {
+  // header.classList.remove('header')
+  profileCont.style.display = 'none'
+} else {
+  // header.classList.add('header')
+  profileCont.style.display = 'block'
+}
+})
