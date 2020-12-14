@@ -22,15 +22,18 @@
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
             <ul class="navbar-nav ml-auto ">
                 <li class="nav-item">
-                    <a class="nav-link active px-3" href="#">About</a>
+                    <a class="nav-link active px-3" href="index.html" id="active">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active px-3" href="#">Resources</a>
+                    <a class="nav-link  px-3" href="about.html" id="navs">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active px-3" href="login.html">Log in</a>
+                    <a class="nav-link  px-3" href="contact.html" id="navs">Contact</a>
                 </li>
-                <li class="nav-item active px-3">
+                <li class="nav-item">
+                    <a class="nav-link px-3" href="login.html" id="navs">Log in</a>
+                </li>
+                <li class="nav-item  px-3">
                     <button class="sign mt-2" data-toggle="modal" data-target="#exampleModal">Sign up</button>
                 </li>
             </ul>
@@ -59,30 +62,39 @@
         </div>
     </nav>
     
-        <div class="header px-5">
-            <div id="headerText">
-                <h1 class="text">Build your future<br>right here.</h1>
-                <p>Join millions of students using Brightly to interact and <br>
-                    connect with their teachers. Brightly is your virtual classroom <br>
-                    where learning can happen anywhere and anytime!</p>
-                <button class="getStarted">
-                    <a id="start" href="#">Get Started <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-                </button>
+        <div class="row">
+            <div class="col-md-6 col-12-sm-12">
+                <div class="header px-5">
+                    <div id="headerText">
+                        <h1 class="text">Build your future<br>right here.</h1>
+                        <p>Join millions of students using Brightly to interact and <br>
+                            connect with their teachers. Brightly is your virtual classroom <br>
+                            where learning can happen anywhere and anytime!</p>
+                        <button class="getStarted">
+                            <a id="start" href="#">Get Started <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                        </button>
+                    </div>
+                </div>
             </div>
-            <img src="https://res.cloudinary.com/ddh4kd4ab/image/upload/v1606739033/IMG_0176_1_nrsgv2.svg" alt=""
-                id="pencil" width="400px" height="400px">
+                
+                <div class="col-md-5">
+                    <img src="https://res.cloudinary.com/ddh4kd4ab/image/upload/v1606739033/IMG_0176_1_nrsgv2.svg" alt=""
+                    id="pencil" width="400px" height="400px">
+                </div>
+                
         </div>
+        
 
         <img class="img-fluid" src="https://res.cloudinary.com/ddh4kd4ab/image/upload/v1606749338/Mask_Group_jo6oju.svg"
             alt="" height="537px">
 
         <div class="row featurette ml-5" id="connect">
-            <div class="col-md-6">
+            <div class="col-md-6 col-12-sm-12">
                 <h3 class="featurette-heading">Connect students and<br>teachers</h3>
                 <p class="lead">Brightly connects Students with their<br> teachers and classmates<br>to create an amazing learning <br>experience.</p>
             </div>
             <div class="col-md-5 order-md-1">
-                <img src="https://res.cloudinary.com/kayode/image/upload/v1606992478/TransAll/MaskGroup_bffeem.png" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" alt="" width="720" height="524">
+                <img src="https://res.cloudinary.com/kayode/image/upload/v1606992478/TransAll/MaskGroup_bffeem.png" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" alt="" width="720" height="524" id="image1">
                 <div class="circle1"></div>
             </div>
             
@@ -91,8 +103,8 @@
         
 
         <div class="row featurette ml-5">
-            <div class="col-md-6">
-                <img src="https://res.cloudinary.com/ddh4kd4ab/image/upload/v1606773859/Mask_Group_3_i0q6i2.svg" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" alt=""width="550" height="500">
+            <div class="col-md-6 col-12-sm-12">
+                <img src="https://res.cloudinary.com/ddh4kd4ab/image/upload/v1606773859/Mask_Group_3_i0q6i2.svg" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" alt=""width="550" height="500" id="image2">
                 <div class="circle2"></div>
             </div>
             <div class="col-md-5 order-md-1" id="voice">
@@ -103,7 +115,7 @@
 
         
         <div class="row featurette ml-5" id="share">
-            <div class="col-md-6">
+            <div class="col-md-6 col-12-sm-12">
                 <h3 class="featurette-heading">Share activities with<br>parents</h3>
                 <p class="lead">We get parents involved by<br>sharing their wards progress<br>report and wonderful classroom<br> moment with them.</p>
             </div>
@@ -116,7 +128,7 @@
             <center>
                 <h5 class="ready mt-5">Ready to join millions of other Students and teachers?</h5>
             <button class="readyTo mt-5">
-                <a id="start" href="#">Get Started <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                <a id="start" href="signupStudent.html">Get Started <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
             </button >
             </center>
             <img src="https://res.cloudinary.com/ddh4kd4ab/image/upload/v1606819423/image_3_kkkkd0.svg" alt="" class="readyCap" width="200px" height="200px">
@@ -129,32 +141,11 @@
 </div>
 <div class="footer">
     <div class="row">
-        <div class="col-md-3 col-sm-12 ml-5 mr-5">
-            <h6 class="ml-4">Company</h6>
-            <ul>
-                <li>About us</li>
-                <li>Press</li>
-                <li>Careers</li>
-                <li>Engineering</li>
-            </ul>
+        <div class="col-md-6 col-12-sm-12">
+            <h6 class="footerText">Brightly is a global educational platform that helps connect <br>students with teachers and resources for effective learning <br> needed for them to reach their full potential.</h6>
         </div>
-        <div class="col-md-3 col-sm-12 ml-5 mr-5">
-            <h6 class="ml-4">Resources</h6>
-            <ul>
-                <li>Video gallery</li>
-                <li>Tutorial</li>
-                <li>Blogs</li>
-                <li>Help</li>
-            </ul>
-        </div>
-        <div class="col-md-3 col-sm-12 ml-5">
-            <h6 class="ml-4">Follow us</h6>
-            <ul>
-                <li>Instagram</li>
-                <li>Twitter</li>
-                <li>Linkedin</li>
-                <li>Facebook</li>
-            </ul>
+        <div class="col-md-5 ml-5">
+            <h6 class="footerText2">Copyright © 2019.Brightly Edu Limited. All Rights Reserved.</h6>
         </div>
     </div>
 </div>

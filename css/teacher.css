@@ -23,7 +23,13 @@
  #Terms{
      padding-left: 3em;
  }
-
+ .close{
+    display: flex;
+    float: right;
+    color: #C4C4C4;
+    margin-left: 70%;
+    padding-bottom: 5%;
+ }
 
 #login{
     padding: 1em;
@@ -38,6 +44,10 @@
     padding: 1.2em 1em;
     border: 1px solid #C4C4C4;
     width: 85%;
+}
+.alert-container {
+    position: fixed;
+    left: 0;
 }
 @media screen and (max-width: 650px) {
     .wrapper{

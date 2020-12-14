@@ -3,43 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Download</title>
-     <!-- Gooogle Fonts -->
-     <link rel="preconnect" href="https://fonts.gstatic.com">
-     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-     <!-- font awesome   -->
-     <script src="https://kit.fontawesome.com/74e1cbbabb.js" crossorigin="anonymous"></script>
-     <!-- css -->
-         <!-- <link rel="stylesheet" href="./page2.css"> -->
-         <link rel="stylesheet" href="css/settings.css">
-         <!-- bootstrap -->
-         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> 
-         
-         <script src="js/settings.js"></script>
+    <title>Settings</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <!-- font awesome   -->
+        <script src="https://kit.fontawesome.com/74e1cbbabb.js" crossorigin="anonymous"></script>
+        <!-- css -->
+        <!-- <link rel="stylesheet" href="./page2.css"> -->
+        <link rel="stylesheet" href="css/dashboard.css">
+        <link rel="stylesheet" href="css/settings.css">
+        
 </head>
 <body>
     <div class="wrapper">
-        <div class="container-fluid">
-            <div class="sidebar">
-                <div class="icon">
-                    <img src=" https://res.cloudinary.com/dhqshvgzy/image/upload/v1607332386/Logo_q08dtn.svg" alt="Profile">
-                </div>
-    
-                <ul style="list-style-type:none" id="menu">
-                    <li> <a href=""> <i class="fas fa-table"></i> </i></i>Home</a> </li>
-                    <li> <a href=""> <i class="far fa-calendar-plus"></i> Classes</a></li>
-                    <li> <a href=""> <i class="fas fa-layer-group"></i>Resources</a></li>
-                    <li> <a href=""> <i class="fas fa-user-clock"></i>Timetable</a> </li>
-                    <li class="active"> <a href=""> <i class="fas fa-cog"></i>Settings</a></li>
-                </ul>
-            </div>
-
-            <div class="mainContent">
-              <div class="main-content-a">
+            <header class="header">
+                <img class="toggler" src="https://res.cloudinary.com/kayode/image/upload/v1607540744/icons8-menu-48_vnxw0t.png" alt="Menu">
+                <a class="logo mt-4" href="/"><img class="image ml-5"src="https://res.cloudinary.com/ddh4kd4ab/image/upload/v1606728913/Layer_x0020_1_dvw2sz.svg" alt=""></a>
+                <ul id="nav-icon">
+                            <!-- <li class="nav-item">
+                                <a class="nav-link" href="#"><img src="https://res.cloudinary.com/ddh4kd4ab/image/upload/v1607336598/Group_xnmmbt.svg" alt=""></a>
+                            </li> -->
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><img src="https://res.cloudinary.com/ddh4kd4ab/image/upload/v1607336625/Group_31_pp1gie.svg" alt=""></a>
+                            </li>
+                            <li class="nav-item pt-2">
+                                <span><img src="https://res.cloudinary.com/ddh4kd4ab/image/upload/v1607336645/Rectangle_66_nyczmq.svg" alt=""></span>
+                            </li>
+                            <li class="nav-item">
+                                <img src="" alt="Avatar" class="avatar">
+                            </li>
+                            <li class="nav-item">
+                                <div class="user">
+                                    <h6 class="firstName">Opeyemi</h6>
+                                </div>
+                            </li>
+                        </ul>
+            </header>
+            <div class="alert-container"></div>
+                <div class="main">
+                    <div class="side-bar-cont">
+                        
+                        <nav class="nav flex-column sidebar" id="nav">
+                            <div class="navItems ml-4" style="margin-bottom:100%;">
+                                <a class="nav-link "  href="/Dashboard.html"><span class="iconify" data-icon="ri:dashboard-line" data-inline="false"></span>Home</a></span>
+                                <a class="nav-link"  href="/classes.html"><span class="iconify" data-icon="mdi:google-classroom" data-inline="false"></span>Classes</a>
+                                <a class="nav-link"  href="#"><span class="iconify" data-icon="grommet-icons:resources" data-inline="false"></span>Resources</a>
+                                <a class="nav-link"  href="#"><span class="iconify" data-icon="mdi:timetable" data-inline="false"></span>Time table</a>
+                                <a class="nav-link active"  href="/Settings.html"><span class="iconify" data-icon="eva:settings-2-outline" data-inline="false"></span>Settings</a>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="mainbar">
+                <div class="main-content-a">
                 <div class="main-content-top">
                   <div class="profilePicture">
-                    <img src="https://res.cloudinary.com/dhqshvgzy/image/upload/v1607369200/profilePicture_skhhjv.svg">
-                    <p><a href="#">Change Picture</a></p>
+                    <img src="https://res.cloudinary.com/dhqshvgzy/image/upload/v1607369200/profilePicture_skhhjv.svg" class="profile-pix">
+                    <!-- <p><span class="btn btn-info" id="change-picture" data-toggle="modal" data-target="#exampleModal">Change Picture</span></p> -->
+                    <div class="form-group">
+                          <input type="file" name="file" id="file" class="form-control">
+                    </div>
                   </div>
                   
                   <div class="personalDetails">
@@ -47,27 +73,27 @@
                         <div class="form-group">
                           <label for="firstName">First name</label> <br>
                           <div class="input-group">
-                            <input type="text" id="firstName">
+                            <input type="text" id="firstName" readonly>
                             <span><i class="fas fa-book"></i> Edit</span>
                           </div> 
                         </div>
                         <div class="form-group">
                           <label for="lastName">Last name</label> <br>
                           <div class="input-group">
-                            <input type="text" id="lastName">
+                            <input type="text" id="lastName" readonly>
                             <span><i class="fas fa-book"></i> Edit</span>
                           </div> 
                         </div>
                         <div class="form-group">
                           <label for="firstName">Email</label> <br>
                           <div class="input-group">
-                            <input type="text" id="email">
+                            <input type="text" id="email" readonly>
                           </div> 
                         </div>
                         <div class="form-group">
                           <label for="firstName">Password</label> <br>
                           <div class="input-group">
-                            <input type="password" id="password">
+                            <input type="password" id="password" readonly>
                             <span><i class="fas fa-book"></i> Change Password</span>
                           </div> 
                         </div>
@@ -121,8 +147,41 @@
                   </div>
               </div>
 
-            </div>
+                    </div>
+                </div>
+        
+    </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Change Picture</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <input type="file" name="file" id="file" class="form-control">
         </div>
+        <!-- <form id="form">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary">Change Avatar</button>
+        </form> -->
+    </div>
   </div>
-</body>
+</div>
+    </body>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+    </script>
+    <script src="js/utils.js"></script>
+    <script src="js/settings.js"></script>
+    <!-- <script src="js\dashboard.js"></script> -->
 </html>

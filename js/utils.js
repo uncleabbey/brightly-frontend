@@ -16,6 +16,7 @@ function myFunction() {
       x.type = 'password';
     }
   }
+
 const makeFetch = async (url) => {
     const token = localStorage.getItem("token");
     // console.log(token)
@@ -34,17 +35,18 @@ const makeFetch = async (url) => {
     }
 };
 
+
 const loadData = async () => {
     const url = "https://brightly-api.herokuapp.com/api/v1/auth/me";
+    // const url = "http://localhost:3000/api/v1/auth/me";
     
     try {
         const res = await makeFetch(url)
         console.log(res.data)
         if(res.status === "success") {
             displayAlert("success", res.message)
-            const first = document.querySelector(".firstName");
-            const { firstName} = res.data.user;
-            first.innerHTML = firstName;
+
+            userDetails(res.data.user);
         } else {
           displayAlert("danger", res.error);
           location.href = "/login.html"
@@ -54,8 +56,6 @@ const loadData = async () => {
         console.log(error)
     }
 }
-
-
 
 const toggleBtn = document.querySelector(".toggler");
 
@@ -72,4 +72,4 @@ toggleBtn.onclick = () => {
   nav.style.display = 'block'
 }
 
-};
+}

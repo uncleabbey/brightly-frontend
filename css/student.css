@@ -24,7 +24,13 @@ form{
 #Terms{
     padding-left: 3em;
 }
-
+.close{
+    display: flex;
+    float: right;
+    color: #C4C4C4;
+    margin-left: 70%;
+    padding-bottom: 5%;
+ }
 #login{
     padding: 1em;
     background: linear-gradient(to right, #FF7534, #F4AE34);
@@ -39,7 +45,10 @@ form{
     border: 1px solid #C4C4C4;
     width: 85%;
 }
-
+.alert-container {
+    position: fixed;
+    left: 0;
+}
 @media screen and (max-width: 650px) {
     .wrapper{
         margin: 4em auto;

@@ -4,15 +4,19 @@
     box-sizing: border-box;  
 }
 
-body{
+body, .wrapper {
     margin: 0;
     padding: 0;
 }
-
+.alert-container {
+    position: fixed;
+    left: 0;
+}
 .header, .header > ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 1em;
 }
 .header ul {
     list-style: none;
@@ -22,6 +26,7 @@ body{
 }
 .side-bar-cont {
     flex: 1;
+    /* background: #fff; */
 }
 .mainbar {
     flex: 5;
@@ -31,7 +36,14 @@ body{
     flex-direction: row;
     
 }
-
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.nav-item {
+    margin-left: 1em;
+}
 .firstName{
     padding-left: 5px;
     color: #242424;
@@ -44,15 +56,16 @@ body{
     margin-bottom: 50px;
 }
 
-#nav{
+#nav, .nav-link {
     color: #FF8200;
 }
 .active {
     font-weight: bolder;
+    border-left: 3px solid #FF8200;
 }
 .nav-link:hover {
     text-decoration: underline;
-    color: black;
+    color: #1E496C;
     font-weight: bolder;
 }
 .toggler {
@@ -75,21 +88,30 @@ body{
 
 
 .head{
-    margin-top: 7%;
+    margin-top: 1%;
     font-family: Helvetica;
     font-weight: bold;
     color: #1E496C;
     margin-left: 50px;
 }
-
-.quiz{
+.top-box{
+    display: flex;
+}
+.quiz-container {
+    flex: 1;
+    margin-left: 50px;
+}
+.homework-container {
+    flex: 1;
+}
+.quiz {
+    margin: 1em 0;
     background: #FFFFFF;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 25px;
     display: flex;
     padding-top: 2%;
     width: 400px;
-    margin-left: 50px;
 }
 .quizText{
     float: right;
@@ -124,21 +146,26 @@ h5{
     font-weight: bold;
     font-size: 20px;
     font-style: normal;
-    margin-left: 50px;
+    /* margin-left: 50px; */
 }
 
-.textbookImage{
+/* .textbookImage{
     margin-left: 50px;
-}
+} */
 
 .homework{
+    margin-bottom: 0;
+    padding-bottom: 0;
     background-color: #B2DB35;
-    border-radius: 25px;
     width: 400px;
     height: 450px;
     margin-left: 10%;
     margin-top: 2%;
-    position: absolute;
+    border-radius: 25px;
+}
+.homework > h4 {
+    text-align: center;
+    border-radius: 25px;
 }
 
 .homeworkText{
@@ -150,14 +177,9 @@ h5{
 }
 
 .homeworkDue{
-    position: relative;
     background: #FFFFFF;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
-    border-radius: 25px;
-    width: 400px;
-    height: 380px;
-    margin-top: 17%;
-    margin-left: 55px;
+    border-radius: 25px 25px 0 0;
 }
 
 .dueText{
@@ -186,7 +208,11 @@ h5{
     font-weight: bold;
     font-style: normal;
 }
-
+.materials-container {
+    margin-top: 2em;
+    display: flex;
+    justify-content: space-between;
+}
 .materials{
     background: linear-gradient(180deg, #B2DB35 0%, #146831 100%);
     border: 1px solid #C4C4C4;
@@ -194,16 +220,26 @@ h5{
     border-radius: 25px;
     width: 400px;
     height: 150px;
+}
+.material-first {
     margin-left: 50px;
+
 }
 .material-second {
-    margin-left: 2em;
+    margin-right: 6em;
 }
 .materialText{
     margin-left: 40px;
     padding-top: 12px;
     color: #FFFFFF;
     font-family: Helvetica;
+}
+.textbookImage {
+    display: flex;
+}
+.textbookImage > img {
+    width: 120px;
+    height: 130px;
 }
 @media screen and (max-width: 900px) {
     .sidebar {
@@ -220,8 +256,6 @@ h5{
     }
     .toggler {
         display: block;
-        /* border: 2px solid #000; */
-        /* background: #000; */
 
     }
     .main {
@@ -230,14 +264,14 @@ h5{
     .mainbar {
         margin-left: 0;
     }
-    .mainbar > .head {
-        margin: 0;
-    }
     .quiz {
         margin-left: 0;
     }
 }
 @media screen and (max-width: 500px) {
+    .head {
+        text-align: center;
+    }
     .logo > img {
         width: 50px;
         height: 50px;
@@ -253,14 +287,35 @@ h5{
     .textbookImage{
     margin: 0 auto;
 }
-.materials, .homework {
+.materials-container {
+    flex-direction: column;
+    margin-top: 17em;
+}
+.materials {
     margin: 1em auto;
+    width: 90%;
 }
 .toggler {
     width: 30px;
     height: 30px;
 }
-.homeworkDue{
-    margin-left: 5px;
+.homework{
+    margin: 0 auto;
+    width: 90%;
+    height: 200px;
+}
+.quiz {
+    width: 90%;
+    margin: 0 auto;
+}
+.textbookImage {
+    flex-wrap: wrap;
+}
+.textbookImage > img {
+    margin: .5em;
+}
+
+.top-box{
+    flex-direction: column;
 }
 } 

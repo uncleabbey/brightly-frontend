@@ -8,5 +8,11 @@ dateElement.innerHTML= today.toLocaleDateString("en-US", options);
 anotherDateElement.innerHTML= today.toLocaleDateString("en-US", options);
 
 
-// initialize load data
 loadData()
+
+const userDetails  = (data) => {
+  const avatar = document.querySelector(".avatar");
+  const first = document.querySelector(".firstName");
+  first.innerHTML = data.firstName;
+  avatar.src = data.avatar;
+}

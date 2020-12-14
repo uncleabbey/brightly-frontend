@@ -1,0 +1,164 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;  
+}
+.container-fluid {
+    margin: 0;
+    padding: 0;
+} 
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.pad {
+    padding: 1em 3em;
+}
+.sign{
+    border: none;
+    border-radius: 16px;
+    background: linear-gradient(to right,rgb(255, 102, 0), rgb(255, 196, 0));
+    color: white;
+    
+    
+}
+
+.sign:focus{
+    outline:none;
+}
+
+.modalHeading{
+    color: #1E496C;
+    font-family: Helvetica;
+    font-weight: bold;
+}
+
+.modalImage{
+    padding-top: 10px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.modalContent{
+    margin-top: 20px;
+}
+
+.close{
+    display: flex;
+    float: right;
+    color: #C4C4C4;
+    margin-left: 91%;
+    
+}
+
+.close:focus{
+    outline:none;
+}
+
+
+.nav-link{
+    color:#000000;
+    font-family: Helvetica;
+    
+    
+}
+
+#navs{
+    color: black;
+
+}
+
+#active{
+    color: #1E496C;
+    font-weight: bold;
+
+    
+}
+
+.nav-link:hover{
+    color: black;
+    text-decoration: underline;
+}
+
+.navbar-toggler{
+    margin-left: auto;
+}
+.logo{
+    
+    display: flex;
+    align-self: center;
+}
+
+input{
+background: #FFFFFF;
+border: 1px solid #C4C4C4;
+box-sizing: border-box;
+box-shadow: 5px 4px 10px rgba(0, 0, 0, 0.1);
+border-radius: 5px;
+width: 516px;
+height: 66px;
+margin-left: 10px;
+}
+
+.form-group{
+    padding-top: 20px;
+}
+
+#label1{
+    margin-top: 10%;
+}
+
+
+
+label{
+    padding-right: 5px;
+    color: #1E496C;
+    font-family: Helvetica;
+    font-size: 12px;
+}
+#report{
+    height: 80px;
+}
+
+#send{
+    background: linear-gradient(270deg, #F4AE34 7.85%, #FF7534 80.23%);
+    border-radius: 5px;
+    width: 516px;
+    height: 70px;
+    margin-left: 20px;
+    margin-bottom: 30%;
+    color: #FFF;
+    font-family: Helvetica;
+}
+h3{
+    color: #1E496C;
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 55px;
+}
+h6{
+    font-family: Helvetica;
+    font-size: 20px;
+    padding-top: 5px;
+}
+
+.footer{
+    background-color: #1E496C;
+    margin-top: 10%;
+    padding: 5% 0% 5% 5%;
+    color: white;
+    font-family: Helvetica;
+}
+
+.footerText{
+    color: #FFFFFF;
+    font-family: Helvetica;
+    font-style: normal;
+    font-size: 17px;
+}
+
+.footerText2{
+    margin-top: 25px;
+    font-size: 18px;
+}
