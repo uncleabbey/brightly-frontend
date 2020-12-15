@@ -66,7 +66,7 @@ const displayData = (data) => {
     classLink.className = "class-link"
     // a.href = `/class-details.html?id=${item._id}`;
 
-    classLink.innerHTML = `<a href=/lesson.html?id=${item._id}>Start Lesson</a>`
+    classLink.innerHTML = `<a href=/lesson.html?id=${item.lessons[0]._id}>Start Lesson</a>`
     h5.innerHTML = item.subject;
     // span.innerHTML = `${item.startTime} - ${item.endTime}`
 
