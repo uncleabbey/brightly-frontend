@@ -1,5 +1,3 @@
-
-
 loadData()
 
 const userDetails  = (data) => {
@@ -21,7 +19,7 @@ const resourceFetch = async () => {
       displayAlert("danger", res.error)
       return;
     } else {
-      // displayAlert("success", res.message)
+    //   displayAlert("success", res.message)
       displayData(res.data.resources)
     }
     console.log(res.data.resources)
@@ -32,24 +30,26 @@ const resourceFetch = async () => {
 
 resourceFetch();
 
-let pdf;
+// let video;
 
 const displayData = (resources) => {
-  const pdfResources = resources.filter((item) => item.type === "pdf");
-  pdf = pdfResources;
+  const pdfResources = resources.filter((item) => item.type === "video");
+  console.log(pdfResources)
+//   pdf = pdfResources;
   return pdfResources.map(item => displayItem(item));
 }
 const displayItem = (item) => {
-  const container = document.querySelector(".pdf-container");
+  const container = document.querySelector(".video-container");
   const div = document.createElement("div");
   const pdfLink = document.createElement("a")
   const lessonLink = document.createElement("a")
-  const img = document.createElement("img")
-
+  const video = document.createElement("video")
+  video.className = "video"
   pdfLink.href = item.link;
   pdfLink.target = "_blank"
-  img.src = "https://res.cloudinary.com/simpu-inc/image/upload/v1608020663/Group_84_twzmcu.svg";
-  pdfLink.append(img)
+  video.src = item.link;
+  video.controls = true;
+  pdfLink.append(video)
   lessonLink.href = item.lesson ? `/lesson.html?id=${item.lesson.class}`: "";
   lessonLink.innerHTML = item.lesson ? `${item.lesson.title.slice(0, 7)}....`: "";
   // console.log("5fd22fc9e082eb003c975690", item.lesson._id)

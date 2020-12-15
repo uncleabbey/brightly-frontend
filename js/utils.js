@@ -44,7 +44,7 @@ const loadData = async () => {
         const res = await makeFetch(url)
         console.log(res.data)
         if(res.status === "success") {
-            displayAlert("success", res.message)
+            // displayAlert("success", res.message)
 
             userDetails(res.data.user);
         } else {
