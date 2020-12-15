@@ -13,16 +13,16 @@ const userDetails  = (data) => {
 
 const resourceFetch = async () => {
   try {
-    const url = "https://brightly-api.herokuapp.com/api/v1/resources"
+    const url = "https://brightly-api.herokuapp.com/api/v1/resources/grade"
     const res = await makeFetch(url)
     if(res.status === "error") {
       displayAlert("danger", res.error)
       return;
     } else {
     //   displayAlert("success", res.message)
-      displayData(res.data.resources)
+      displayData(res.data.resourcess)
     }
-    console.log(res.data.resources)
+    console.log(res.data.resourcess)
   } catch (error) {
     console.log(error)
   }
@@ -41,6 +41,7 @@ const displayData = (resources) => {
 const displayItem = (item) => {
   const container = document.querySelector(".video-container");
   const div = document.createElement("div");
+  div.className = "video-div"
   const pdfLink = document.createElement("a")
   const lessonLink = document.createElement("a")
   const video = document.createElement("video")
@@ -51,7 +52,7 @@ const displayItem = (item) => {
   video.controls = true;
   pdfLink.append(video)
   lessonLink.href = item.lesson ? `/lesson.html?id=${item.lesson.class}`: "";
-  lessonLink.innerHTML = item.lesson ? `${item.lesson.title.slice(0, 7)}....`: "";
+  lessonLink.innerHTML = item.title;
   // console.log("5fd22fc9e082eb003c975690", item.lesson._id)
   div.append(pdfLink)
   div.append(lessonLink)

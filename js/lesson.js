@@ -20,17 +20,17 @@ const id = url.searchParams.get("id");
 
 const fetchLessonData = async () => {
   try {
-    const url = `https://brightly-api.herokuapp.com/api/v1/class/${id}`;
-    // const url = `http://localhost:3000/api/v1/class/${id}`;
+    const url = `https://brightly-api.herokuapp.com/api/v1/lessons/${id}`;
+    // const url = `http://localhost:3000/api/v1/lessons/${id}`;
     const res = await makeFetch(url);
     if (res.status === "success") {
       displayAlert("success", res.message);
       console.log(res.data);
-      resp = res.data.class;
-      displayData(res.data.class);
+      resp = res.data.lesson;
+      displayData(res.data.lesson);
     } else {
       displayAlert("danger", res.error);
-      location.href = "/login.html"
+      // location.href = "/login.html"
     }
   } catch (error) {
     console.log(error);
@@ -41,13 +41,13 @@ const displayData = (data) => {
   const container = document.querySelector(".lesson-container");
   const title = document.querySelector("#title");
 
-  title.innerHTML = data.subject;
+  title.innerHTML = data.class.subject;
 
   const head = document.createElement("div");
   head.className = "class-head";
 
   const lessonTitle = document.createElement("h4");
-  lessonTitle.innerHTML = data.lessons[0].title;
+  lessonTitle.innerHTML = data.title;
   const obj = document.createElement("p");
   obj.className = "obj";
   obj.innerHTML =
@@ -57,7 +57,7 @@ const displayData = (data) => {
 
   const body = document.createElement("div");
   body.className = "class-body";
-  body.innerHTML = data.lessons[0].body;
+  body.innerHTML = data.body;
   container.append(head);
   container.append(body);
 
@@ -66,17 +66,17 @@ const displayData = (data) => {
 
   const video = document.createElement("video");
 
-  video.src = data.lessons[0].resources.filter(
+  video.src = data.resources.filter(
     (resource) => resource.type === "video"
   )[0]
-    ? data.lessons[0].resources.filter(
+    ? data.resources.filter(
         (resource) => resource.type === "video"
       )[0].link
     : "";
   video.controls = true;
   videoContainer.append(video);
 
-  data.lessons[0].comments.map((comment) => {
+  data.comments.map((comment) => {
     const comments = document.querySelector(".comments");
     const div = document.createElement("div");
     div.className = "comment";
@@ -112,7 +112,7 @@ document.getElementById("send").addEventListener("click", (e) => {
   e.preventDefault();
   const input = document.getElementById("comment-input").value;
 
-  const id = resp.lessons[0]._id;
+  const id = resp._id;
   const url = `https://brightly-api.herokuapp.com/api/v1/lessons/${id}/comments`;
   // const url = `http://localhost:3000/api/v1/lessons/${id}/comments`;
   const data = {

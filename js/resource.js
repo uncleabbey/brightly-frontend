@@ -15,16 +15,16 @@ const userDetails  = (data) => {
 
 const resourceFetch = async () => {
   try {
-    const url = "https://brightly-api.herokuapp.com/api/v1/resources"
+    const url = "https://brightly-api.herokuapp.com/api/v1/resources/grade"
     const res = await makeFetch(url)
     if(res.status === "error") {
       displayAlert("danger", res.error)
       return;
     } else {
+      console.log(res.data.resourcess)
       // displayAlert("success", res.message)
-      displayData(res.data.resources)
+      displayData(res.data.resourcess)
     }
-    console.log(res.data.resources)
   } catch (error) {
     console.log(error)
   }
@@ -50,8 +50,8 @@ const displayItem = (item) => {
   pdfLink.target = "_blank"
   img.src = "https://res.cloudinary.com/simpu-inc/image/upload/v1608020663/Group_84_twzmcu.svg";
   pdfLink.append(img)
-  lessonLink.href = item.lesson ? `/lesson.html?id=${item.lesson.class}`: "";
-  lessonLink.innerHTML = item.lesson ? `${item.lesson.title.slice(0, 7)}....`: "";
+  lessonLink.href = item.lesson ? `/lesson.html?id=${item.lesson._id}`: "";
+  lessonLink.innerHTML = item.title;
   // console.log("5fd22fc9e082eb003c975690", item.lesson._id)
   div.append(pdfLink)
   div.append(lessonLink)
