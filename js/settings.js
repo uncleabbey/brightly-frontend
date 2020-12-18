@@ -17,7 +17,7 @@ const userDetails = (data) => {
   email.value = data.email;
   firstName.value = data.firstName;
   lastName.value = data.lastName;
-  password.value = "gdggdgsss";
+  password.value = "gdggdg";
   image.src = data.avatar;
   avatar.src = data.avatar;
   const name = document.querySelector(".profile-name");

@@ -1,3 +1,4 @@
+
 .wrapper{
     margin: 7em auto;
     width: 35%;
@@ -45,7 +46,12 @@
      width: 90%;
      display: flex;
      justify-content: space-between;
+     background: #e8f0fe;
  }
+ 
+ /* #form .input-group input {
+     background: #fff;
+ } */
  #form .input-group #password {
      border: 0;
      outline: 0;
@@ -54,6 +60,7 @@
  #form .input-group input:focus {
      border: 0;
      outline: none;
+     background: #e8f0fe;
  }
  #signup{
      margin-top: 40px;
