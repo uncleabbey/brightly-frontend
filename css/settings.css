@@ -63,7 +63,7 @@ form {
   border: 1px solid #ccc;
   display: flex;
   justify-content: space-between;
-  padding: .6em;
+  padding: .5em;
 }
 .form-group > .input-group > input {
   border: 0;
@@ -73,6 +73,10 @@ form {
 .form-group > .input-group > span {
   font-size: 0.65em;
   color: grey;
+}
+.change-password {
+  display: flex;
+  justify-content: space-between;
 }
 .result {
     margin:  0 auto;

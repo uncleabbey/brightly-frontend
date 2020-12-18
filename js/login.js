@@ -62,3 +62,7 @@ const makeFetch = async (data, url) => {
       return err;
     }
 };
+
+// document.querySelector(".input-group").addEventListener("focus", (e) => {
+//  console.log(e.target)
+// })
