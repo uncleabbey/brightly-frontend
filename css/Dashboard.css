@@ -420,4 +420,18 @@ h5{
     left: 100px;
     top: 100px;
 }
+
 } 
+
+@media screen and (width:1024px){
+    .material-second{
+        margin-left: 120px;
+    }
+}
+
+/* @media screen and (width:768px){
+    .material-second{
+        margin-left: 400px;
+        width: 500%;
+    }
+} */

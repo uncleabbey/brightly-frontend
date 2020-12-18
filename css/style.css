@@ -284,22 +284,39 @@ ul li{
    
     #headerText{
         text-align: center;
+        /* font-size: 80px; */
         margin-bottom: 15%;
     }
 
+    .text{
+        font-size: 47px;
+    }
+
     #voice{
-        margin-right:auto;
-        padding-left: 10px;
+        margin-right: auto;
+        padding-right: 0px;
+        padding-left: 0px;
         margin-top: 10px;
+        margin-left: -0 !important;
+        margin-right: -0 !important; 
     }
 
     #share{
         margin-top: 15px;
         padding-left: 0px;
+        margin-left: 0 !important;
+        margin-right: 0 !important; 
     }
 
     #connect{
         margin-top: 60px;
+        margin-left: 0 !important;
+        margin-right: 0 !important; 
+        
+    }
+
+    .featurette-heading{
+        font-size: 35px;
     }
 
     #pencil{
@@ -310,6 +327,8 @@ ul li{
     #image1{
         margin-bottom: 90px;
     }
+
+   
 
     
 

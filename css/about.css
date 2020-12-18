@@ -7,6 +7,9 @@
     margin: 0;
     padding: 0;
 } 
+html {
+    overflow-x: hidden;
+}
 body {
     margin: 0;
     padding: 0;
@@ -138,4 +141,12 @@ body {
 .footerText2{
     margin-top: 25px;
     font-size: 18px;
+}
+
+
+
+@media screen and (max-width:1024px){
+    .about{
+        font-size: 55px;
+    }
 }
