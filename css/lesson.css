@@ -107,6 +107,7 @@
 
 .comment-body {
   flex: 5;
+  text-align: center;
 }
 .date-container {
   flex: 2;
