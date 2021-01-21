@@ -33,7 +33,7 @@ const fetchLessonData = async () => {
       // location.href = "/login.html"
     }
   } catch (error) {
-    console.log(error);
+    console.log(error ? error: "");
   }
 };
 fetchLessonData();
@@ -79,12 +79,14 @@ const displayData = (data) => {
   data.comments.map((comment) => {
     const comments = document.querySelector(".comments");
     const div = document.createElement("div");
+    const avatarCont = document.createElement("div");
     div.className = "comment";
+    avatarCont.className = "avatarCont";
     const commentBody = document.createElement("div");
     commentBody.className = "comment-body";
     const avatar = document.createElement("img");
     const h6 = document.createElement("h6");
-    const p = document.createElement("p");
+    const p = document.createElement("small");
     const date = document.createElement("small");
     const time = document.createElement("small");
     const dateCont = document.createElement("div");
@@ -101,7 +103,8 @@ const displayData = (data) => {
 
     commentBody.append(h6);
     commentBody.append(p);
-    div.append(avatar);
+    avatarCont.append(avatar)
+    div.append(avatarCont);
     div.append(commentBody);
     div.append(dateCont);
     comments.append(div);

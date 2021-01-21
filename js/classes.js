@@ -62,11 +62,11 @@ const displayData = (data) => {
     const h5 = document.createElement("h4")
     const p = document.createElement("p")
     const title = document.createElement("h5")
-    const classLink = document.createElement("div");
+    const classLink = document.createElement("a");
     classLink.className = "class-link"
     // a.href = `/class-details.html?id=${item._id}`;
-
-    classLink.innerHTML = `<a href=/lesson.html?id=${item.lessons[0]._id}>Start Lesson</a>`
+    classLink.href = `/lesson.html?id=${item.lessons[0]._id}`
+    classLink.innerHTML = `<button type=button>Start Lesson</button>`
     h5.innerHTML = item.subject;
     // span.innerHTML = `${item.startTime} - ${item.endTime}`
 

@@ -59,3 +59,11 @@ const handleUpload = (event) => {
   });
 }
 
+const signoutD = document.getElementById("signout-down");
+
+signoutD.addEventListener("click", (e) => {
+  e.preventDefault();
+  localStorage.removeItem("token");
+  displayAlert("success", "Successfully signed out");
+  location.href = "/"
+})

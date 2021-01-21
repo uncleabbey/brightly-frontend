@@ -44,8 +44,10 @@ const displayItem = (item) => {
   div.className = "video-div"
   const pdfLink = document.createElement("a")
   const lessonLink = document.createElement("a")
+  const subject = document.createElement("h6")
   const video = document.createElement("video")
   video.className = "video"
+  lessonLink.className = "lessonLink"
   pdfLink.href = item.link;
   pdfLink.target = "_blank"
   video.src = item.link;
@@ -54,7 +56,11 @@ const displayItem = (item) => {
   lessonLink.href = item.lesson ? `/lesson.html?id=${item.lesson.class}`: "";
   lessonLink.innerHTML = item.title;
   // console.log("5fd22fc9e082eb003c975690", item.lesson._id)
+  subject.innerHTML = item.lesson ? `${item.lesson.class.subject}`: ""
+
+
   div.append(pdfLink)
+  div.append(subject)
   div.append(lessonLink)
 
   container.append(div);
