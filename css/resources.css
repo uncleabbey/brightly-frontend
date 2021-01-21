@@ -61,7 +61,14 @@ a:hover{
     height: 250px;
 }
 .video-div {
-    text-align: center;
+    text-align: left;
+}
+.video-div h6 {
+    font-size: 14px;
+    font-weight: bolder;
+}
+.video-div .lessonLink {
+    font-size: 12px;
 }
 
 @media screen and (max-width: 500px) { 

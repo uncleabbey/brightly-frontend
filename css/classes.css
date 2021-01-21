@@ -1,4 +1,6 @@
-
+.main {
+  /* background: rgba(134, 220, 255, 0.03); */
+}
 .mainbar-header {
   margin-left: 4em;
 }
@@ -8,10 +10,11 @@
 
 .classes {
   background: #B2DB35;
-  border-radius: 25px;
+  border-radius: 25px 25px 0 0;
   /* padding: 2em; */
   width: 95%;
   margin: 2em;
+  box-shadow: 0 5px #B2DB35;
 }
 .classes-head {
   padding: 1em 2em;
@@ -38,14 +41,21 @@
 .flex {
   display: flex;
 }
-.class-link > a {
+.class-link > button {
   margin-top: auto;
   border-radius: 30px;
   padding: 1em 3em;
   background: linear-gradient(270deg, #F4AE34 7.85%, #FF7534 80.23%);
   color: white;
+  outline: 0;
+  border: 0;
 }
-
+.class-link > button:hover {background: #146831;}
+.class-link > button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translate(4px);
+}
 @media screen and (max-width: 500px) {
   .mainbar-header > h1 {
   font-size: 1.75em;

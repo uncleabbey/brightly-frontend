@@ -146,3 +146,15 @@ document.getElementById("profile-btn").addEventListener("click", (e) => {
   profileCont.style.display = 'block'
 }
 })
+
+
+// signout
+
+const signout = document.getElementById("signout");
+
+signout.addEventListener("click", (e) => {
+  e.preventDefault();
+  localStorage.removeItem("token");
+  displayAlert("success", "Successfully signed out");
+  location.href = "/"
+})
