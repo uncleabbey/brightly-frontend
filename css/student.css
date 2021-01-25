@@ -29,6 +29,7 @@ form{
     float: right;
     color: #C4C4C4;
     margin-left: 70%;
+    font-size: 3em;
     padding-bottom: 5%;
  }
 #login{
@@ -38,6 +39,9 @@ form{
     font-weight: bold;
     width: 85%;
     margin: 2.5em auto 0 auto ;
+}
+.here {
+    color: #FAAe34;
 }
 
 #form  input {
