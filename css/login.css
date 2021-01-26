@@ -14,6 +14,7 @@
     margin: 0 auto;
     width: 95%;
     padding-left: 2em;
+    padding-bottom: 15px;
  } 
  
  .close{
@@ -22,6 +23,7 @@
     color: #C4C4C4;
     margin-left: 70%;
     padding-bottom: 5%;
+    font-size: 3em;
  }
  #login{
      padding-top: 1em;
@@ -37,11 +39,11 @@
      margin-top: 2em;
  }
  #form #email {
-     padding: 1.2em 1em;
+     padding: 12px 1em;
      border: 1px solid #C4C4C4;
  }
  #form .input-group {
-     padding: 1em;
+     padding: 6px;
      border: 1px solid #C4C4C4;
      width: 90%;
      display: flex;
@@ -74,6 +76,10 @@
      border-radius: 10px;
      border: 1px solid black;
  }
+
+ .form-group > .forgot{
+     color: r;
+ }
  .form-group > p {
      margin-top: 3em;
      text-align: center;
@@ -96,10 +102,21 @@
  .radio-cont a {
      color: #9E9E9E;
      font-weight: bold;
+     font-size: 15px;
+     font-style: normal;
+ }
+ .radio-cont .forgot{
+     color: #FF7534;
+     font-size: 15px;
  }
  .alert-container {
     position: fixed;
     left: 0;
+}
+
+#eye{
+    padding:15px 2px;
+    color: #C4C4C4;
 }
  @media screen and (max-width: 650px) {
      .wrapper{

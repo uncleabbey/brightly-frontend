@@ -22,6 +22,9 @@
  }
  #Terms{
      padding-left: 3em;
+     color: rgba(30, 73, 108, 0.3);
+     font-family: roboto;
+     font-weight: 14px;
  }
  .close{
     display: flex;
@@ -29,8 +32,13 @@
     color: #C4C4C4;
     margin-left: 70%;
     padding-bottom: 5%;
+    font-size: 3em;
  }
-
+ .here{
+    color: #FF7534;
+    font-size: 14px;
+    text-decoration: underline;
+ }
 #login{
     padding: 1em;
     background: linear-gradient(to right, #FF7534, #F4AE34);
