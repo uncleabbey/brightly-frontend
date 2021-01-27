@@ -19,8 +19,8 @@ const userDetails  = (data) => {
 const dayElement = document.querySelector(".presentDate");
 
 const date = new Date();
-
-dayElement.innerHTML = date.toLocaleDateString()
+const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"]
+dayElement.innerHTML = `${months[date.getMonth()]} ${date.getDate()}`;
 
 
 // fetch class data
@@ -45,7 +45,16 @@ const fetchClassData = async () => {
 
 fetchClassData()
 
+const timeFormmater = (str) => {
+  const time = Number(str);
 
+  if (time <= 12) {
+    return `${time.toFixed(2)} AM`
+  } else {
+    const res = time - 12;
+    return `${time.toFixed(2)} PM`
+  }
+}
 
 const displayData = (data) => {
   const container = document.querySelector(".display-data");
@@ -58,7 +67,7 @@ const displayData = (data) => {
     body.className = "classes-body";
     const flex = document.createElement("div")
     flex.className = "flex";
-    // const span = document.createElement("span")
+    const span = document.createElement("span")
     const h5 = document.createElement("h4")
     const p = document.createElement("p")
     const title = document.createElement("h5")
@@ -68,12 +77,13 @@ const displayData = (data) => {
     classLink.href = `/lesson.html?id=${item.lessons[0]._id}`
     classLink.innerHTML = `<button type=button>Start Lesson</button>`
     h5.innerHTML = item.subject;
-    // span.innerHTML = `${item.startTime} - ${item.endTime}`
+    span.innerHTML = `${timeFormmater(item.lessons[0].startTime)} - ${timeFormmater(item.lessons[0].endTime)}`
 
     title.innerHTML = `Title: ${item.lessons[0].title}`;
-    p.innerHTML = "Learning Objectives: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores, autem?"
+    p.className = "objective"
+    p.innerHTML = `Learning Objective: ${item.lessons[0].objective}`
     head.append(h5)
-    // head.append(span)
+    head.append(span)
     body.append(title)
     flex.append(p)
     flex.append(classLink)

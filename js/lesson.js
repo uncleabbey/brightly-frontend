@@ -40,9 +40,9 @@ fetchLessonData();
 const displayData = (data) => {
   const container = document.querySelector(".lesson-container");
   const title = document.querySelector("#title");
-
+  const time = document.querySelector("#time")
   title.innerHTML = data.class.subject;
-
+  time.innerHTML = `${timeFormmater(data.startTime)} - ${timeFormmater(data.endTime)}`
   const head = document.createElement("div");
   head.className = "class-head";
 
@@ -50,8 +50,7 @@ const displayData = (data) => {
   lessonTitle.innerHTML = data.title;
   const obj = document.createElement("p");
   obj.className = "obj";
-  obj.innerHTML =
-    "Learning Objectives: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores, autem?";
+  obj.innerHTML = `Learning Objectives: ${data.objective}`;
   head.append(lessonTitle);
   head.append(obj);
 
@@ -192,3 +191,14 @@ const addCommentToUI = (data) => {
   div.append(dateCont);
   comments.append(div);
 };
+
+const timeFormmater = (str) => {
+  const time = Number(str);
+
+  if (time <= 12) {
+    return `${time.toFixed(2)} AM`
+  } else {
+    const res = time - 12;
+    return `${res.toFixed(2)} PM`
+  }
+}

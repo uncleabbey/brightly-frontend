@@ -1,10 +1,17 @@
 .mainbar-header {
   display: flex;
   align-items: baseline;
+  width: 90%;
+  margin: 0 auto;
 }
-.mainbar-header > h1 {
+.mainbar-header > h3 {
   margin-left: 1em;
   color: #1E496C;
+  margin-bottom: 0;
+}
+#time {
+  margin-top: 0;
+  margin-left: 10em;
 }
 
 .lesson-container {
@@ -19,6 +26,11 @@
   border: 1px solid #C4C4C4;
   border-radius: 25px;
   padding: 1em;
+  margin: 2em 0;
+}
+.class-body {
+  width: 90%;
+  margin: 0 auto;
 }
 .obj {
   margin-top: 3em;
@@ -29,13 +41,14 @@
   margin: 0 auto;
 }
 .video > h4  {
+  margin-top: 3em;
   margin-bottom: 2em;
   color: #FF7534;
 }
 
 .comment-container {
   padding: 1em;
-  width: 80%;
+  width: 100%;
   margin: 4em auto;
 }
 .comment-container  > h4 {
@@ -117,7 +130,10 @@
 }
 video {
   width: 100%;
-  height: 400px;
+  height: 462px;
+}
+.heart-row {
+  display: flex;
 }
 @media screen and (max-width: 500px) {
   .comments .comment {
