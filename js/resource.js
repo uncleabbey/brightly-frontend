@@ -15,7 +15,8 @@ const userDetails  = (data) => {
 
 const resourceFetch = async () => {
   try {
-    const url = "https://brightly-api.herokuapp.com/api/v1/resources/grade"
+    // const url = "http://localhost:3000/api/v1/resources/grade";
+    const url = "https://brightly-api.herokuapp.com/api/v1/resources/grade";
     const res = await makeFetch(url)
     if(res.status === "error") {
       displayAlert("danger", res.error)

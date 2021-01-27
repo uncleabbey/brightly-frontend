@@ -3,6 +3,18 @@
 *::after {
     box-sizing: border-box;  
 }
+.header{
+    /* background: rgba(134, 220, 255, 0.03); */
+}
+/* .logo-cont{
+    background: #FFFFFF;
+    padding-right: 1.5em;
+    padding-left: 1.5em; */
+/* } */
+.logo > img {
+    width: 104px;
+    height: 102.46px;
+}
 html {
     scroll-behavior: smooth;
 }
@@ -14,14 +26,14 @@ body, .wrapper {
     position: fixed;
     left: 0;
 }
-.header, .header > ul {
+.header > ul {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
-    padding: 1em;
-    background: rgba(134, 220, 255, 0.03);
 }
 .header ul {
+padding: 1em;
+    /* background: rgba(134, 220, 255, 0.03); */
     list-style: none;
 }
 .main {
@@ -337,16 +349,22 @@ h5{
     .logo > img {
         width: 80px;
         height: 80px;
+        position: absolute;
+        top: 10px;
+        left: 50px;
     }
     .toggler {
         display: block;
-
+        margin-top: 25px;
     }
     .main {
         display: block;
     }
     .mainbar {
         margin-left: 0;
+        position: absolute;
+        top: 0;
+        z-index: -1;
     }
     .quiz {
         margin-left: 0;
@@ -364,18 +382,26 @@ h5{
 }
 }
 @media screen and (max-width: 500px) {
+    .mainbar {
+        position: absolute;
+        top: 0;
+        z-index: -1;
+    }
     .head {
         text-align: center;
     }
     .logo > img {
         width: 50px;
         height: 50px;
+        position: absolute;
+        top: 15px;
+        left: 8px;
     }
     .sidebar {
         display: none;
         width: 250px;
         position: absolute;
-        bottom: 2em;
+        top: 5em;
         z-index: 1; 
         background: #fff;
     }
@@ -391,6 +417,7 @@ h5{
     width: 90%;
 }
 .toggler {
+    margin-top: 25px;
     width: 30px;
     height: 30px;
 }
